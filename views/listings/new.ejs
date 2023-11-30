@@ -1,0 +1,46 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <br><br>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1>Create a new Listing</h1>
+            <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input class="form-control" type="text" name="listing[title]" placeholder="enter title" autocomplete="off" required>
+                    <div class="invalid-feedback">Please enter a title</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea class="form-control" name="listing[description]" placeholder="enter description" required></textarea>
+                    <div class="invalid-feedback">Share more details about your item or service</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Upload Image</label>
+                    <input class="form-control" type="file" name="listing[image]" autocomplete="off">
+                    <div class="invalid-feedback">Provide a valid URL for the image of your listing</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="description" class="form-label">Price:</label>
+                        <input class="form-control"  name="listing[price]" placeholder="enter price" autocomplete="off" required>
+                        <div class="invalid-feedback">Enter a numerical value for the price of your item</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="description" class="form-label">Country:</label>
+                        <input class="form-control" type="text" name="listing[country]" placeholder="enter country" autocomplete="off" required>
+                        <div class="invalid-feedback">Select the country</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Location:</label>
+                    <input class="form-control" type="text" name="listing[location]" placeholder="enter location" autocomplete="off" required>
+                    <div class="invalid-feedback">Specify the exact location</div>
+                </div>
+                <button class="btn btn-dark add-btn">Add</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+    
+</body>
