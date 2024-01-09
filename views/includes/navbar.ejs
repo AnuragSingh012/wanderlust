@@ -1,25 +1,40 @@
 <style>
+  .search {
+    width: 70%;
+    background-color: white;
+    padding: 0 10%;
+  }
+  .search-bar {
+    width: 70%;
+    border-radius: 100px;
+    border: 1px solid #d7d7d7;
+    background-color: #f7f7f7;
+    padding: 5px 20px;
+  }
+
   .search-btn {
+    border: 0;
+    border-radius: 100px;
+    padding: 5px 20px;
     background-color: #ff0000;
     color: white;
-    border-radius: 25px;
-    padding: 0 20px;
-    border: 0;
   }
 
-  .search-btn:hover {
-    background-color: #ff0000;
+  @media screen and (max-width: 768px) {
+    .search {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .footer div {
+      width: 50%;
+    }
   }
 
-  .search-inp {
-    border-radius: 25px;
-    padding: 7px 200px 7px 10px;
-  }
-
-  .search {
-    padding: 2px;
-    background-color: whitesmoke;
-    border-radius: 25px;
+  @media screen and (max-width: 768px) {
+    .explore {
+      display: none !important;
+    }
   }
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -30,12 +45,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav" style="background-color: white;">
-          <a class="nav-link" href="/listings">Explore</a>
+          <a class="nav-link explore" href="/listings">Explore</a>
         </div>
-        <div class="search ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" aria-label="Search">
-            <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+        <div class="search">
+          <form>
+            <input class="search-bar" type="search" name="search" id="search" placeholder="Search Destinations">
+            <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
         <div class="navbar-nav ms-auto" style="background-color: white;">
