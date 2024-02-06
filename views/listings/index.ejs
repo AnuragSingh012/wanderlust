@@ -1,9 +1,14 @@
 <% layout("./layouts/boilerplate") %>
 
 <style>
+    .filter-options {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     #filters {
         display: flex;
+        overflow: hidden;
     }
 
     .filter {
@@ -46,50 +51,57 @@
         width: 20%;
         overflow: hidden;
     }
+    @media screen and (max-width: 1398px)  {
+        .tax-toggle {
+            margin-top: 2rem;
+        }
+    }
 </style>
 
 <body>
     <br>
-    <div id="filters">
-        <div class="filter">
-            <div><i class="fa-solid fa-fire"></i></div>
-            <p>Trending</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-bed"></i></div>
-            <p>Rooms</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-tractor"></i></div>
-            <p>Farms</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-regular fa-snowflake"></i></div>
-            <p>Arctic</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-building"></i></div>
-            <p>Iconic cities</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-water-ladder"></i></div>
-            <p>Amazing pools</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-chess-rook"></i></div>
-            <p>Castles</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-ship"></i></div>
-            <p>Boats</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-person-skiing"></i></div>
-            <p>Ski-in/out</p>
-        </div>
-        <div class="filter">
-            <div><i class="fa-solid fa-tent"></i></div>
-            <p>Camping</p>
+    <div class="filter-options">
+        <div id="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tractor"></i></div>
+                <p>Farms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-regular fa-snowflake"></i></div>
+                <p>Arctic</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-building"></i></div>
+                <p>Iconic cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-water-ladder"></i></div>
+                <p>Amazing pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-chess-rook"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-ship"></i></div>
+                <p>Boats</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-skiing"></i></div>
+                <p>Ski-in/out</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tent"></i></div>
+                <p>Camping</p>
+            </div>
         </div>
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
